@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCR - Binar Car Rental</title>
+  <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="./assets/icon/favicon.png">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif}html{height: 100%};</style>
+</head>
+<body class="flex flex-col">
+  <!-- Navbar -->
+  <div id="navbar" class="h-[15vh] bg-[#F1F3FF]">
+    <nav class="">
+      <div class="md:w-[90vw] flex flex-wrap items-center justify-between mx-auto p-6">
+        <div class="p-4">
+          <div id="blue-bar" class="h-8 w-20 bg-blue-800"></div>
+        </div>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden dark:text-gray-400" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden z-10 w-full md:block md:w-auto md:mr-10 md:border-0 border border-black rounded-2xl" id="navbar-default">
+          <ul class="font-medium bg-[#F1F3FF] md:text-[1.1vw] flex flex-col p-4 md:p-0 rounded-2xl md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-[#F1F3FF]">
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">Our Services</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">Why Us</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">Testimonial</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">FAQ</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded bg-[#5CB85F] hover:bg-green-600 md:border-0 md:hover:text-blue-700 md:p-2 dark:text-white dark:hover:text-white">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Landing -->
+  <div id="landing" class="h-[85vh] bg-[#F1F3FF] w-full flex md:flex-row flex-col items-center">
+    <div class="text md:w-[50%] h-[50%] ml-4 p-4 flex flex-col justify-center md:ml-20">
+      <h1 class="text-[8vw] font-bold md:text-[2.5vw]">Sewa & Rental Mobil Terbaik di kawasan Cibaduyut</h1>
+      <p class="text-sm md:text-[1vw] md:w-[70%] w-[90%] text-justify mt-6">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil.</p>
+      <a href="" class="text-white bg-[#5CB85F] w-40 md:w-[10vw] text-sm md:text-[1vw] text-center p-2 mt-4">Mulai Sewa Mobil</a>
+    </div>
+    <div class="image md:w-[50%] h-[50%] w-full flex justify-end mt-10 md:mt-0">
+      <img src="./assets/images/car.svg" alt="" class="absolute w-[90%] md:top-[30%] md:w-[47%]">
+      <div class="bluecar md:w-full rounded-tl-[4rem] bg-blue-800 w-[95%] h-[50%] md:h-[10rem] mt-[10%] md:mt-[30%]"></div>
+    </div>
+  </div>
+  <!-- Best Car Rental -->
+  <div id="bestCar" class="h-[100vh] bg-white w-full flex md:flex-row flex-col items-center justify-center">
+    <div class="woman-image h-[40%] md:h-full md:w-[40%] md:flex md:flex-col justify-center items-center">
+      <img src="./assets/images/woman.svg" alt="" class="w-[50vw] md:w-[25vw]">
+      <img src="./assets/images/Ellipse 19.svg" alt="" class="w-[20vw] md:w-[8vw] relative right-[30%] bottom-[70%] md:absolute md:left-[10vw] md:bottom-[-20vw]">
+      <img src="./assets/images/Ellipse 20.svg" alt="" class="w-[8vw] md:w-[4vw] relative right-[5%] bottom-[25%] md:absolute md:left-[10vw] md:bottom-[-35vw]">
+      <img src="./assets/images/Ellipse 21.svg" alt="" class="w-[5vw] md:w-[2vw] relative left-[95%] bottom-[90%] md:absolute md:left-[40vw] md:bottom-[-15vw]">
+    </div>
+    <div class="text-woman w-[85%] md:w-[40%] md:h-full flex flex-col gap-4 md:justify-center">
+      <p class="font-bold text-[6vw] md:text-[2vw] text-justify">Best Car Rental for any kind of trip in Cibaduyut!</p>
+      <p class="text-xs md:text-[1vw] text-justify">Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.</p>
+      <div class="list flex flex-col gap-3">
+        <p class="flex flex-row gap-4 text-[3.5vw] md:text-[1vw]">
+          <img class="w-[5vw] md:w-[2vw]" src="https://img.icons8.com/fluency/48/instagram-check-mark.png" alt="instagram-check-mark"/>
+          Sewa Mobil Dengan Supir di Bali 12 Jam
+        </p>
+        <p class="flex flex-row gap-4 text-[3.5vw] md:text-[1vw]">
+          <img class="w-[5vw] md:w-[2vw]" src="https://img.icons8.com/fluency/48/instagram-check-mark.png" alt="instagram-check-mark"/>
+          Sewa Mobil Lepas Kunci di Bali 24 Jam
+        </p>
+        <p class="flex flex-row gap-4 text-[3.5vw] md:text-[1vw]">
+          <img class="w-[5vw] md:w-[2vw]" src="https://img.icons8.com/fluency/48/instagram-check-mark.png" alt="instagram-check-mark"/>
+          Sewa Mobil Jangka Panjang Bulanan
+        </p>
+        <p class="flex flex-row gap-4 text-[3.5vw] md:text-[1vw]">
+          <img class="w-[5vw] md:w-[2vw]" src="https://img.icons8.com/fluency/48/instagram-check-mark.png" alt="instagram-check-mark"/>
+          Gratis Antar - Jemput Mobil di Bandara
+        </p>
+        <p class="flex flex-row gap-4 text-[3.5vw] md:text-[1vw]">
+          <img class="w-[5vw] md:w-[2vw]" src="https://img.icons8.com/fluency/48/instagram-check-mark.png" alt="instagram-check-mark"/>
+          Layanan Airport Transfer / Drop In Out
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="whyUs" class="h-[120vh] bg-white w-full flex md:flex-row flex-col items-center">
+    <div class="text h-[20vh] bg-black w-full">
+
+    </div>
+    <div class="card">
+      
+    </div>
+  </div>
+</body>
+</html>
