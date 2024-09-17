@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCR - Binar Car Rental</title>
+  <link rel="icon" href="./assets/icon/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif}html{height: 100%};</style>
+</head>
+<body class="flex flex-col">
+  <!-- Navbar -->
+  <div id="navbar" class="h-[15vh] bg-[#F1F3FF]">
+    <nav class="">
+      <div class="md:w-[90vw] flex flex-wrap items-center justify-between mx-auto p-6">
+        <div class="p-4">
+          <div id="blue-bar" class="h-8 w-20 bg-blue-800"></div>
+        </div>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden dark:text-gray-400" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden z-10 w-full md:block md:w-auto md:mr-10 md:border-0 border border-black rounded-2xl" id="navbar-default">
+          <ul class="font-medium bg-[#F1F3FF] md:text-[1.1vw] flex flex-col p-4 md:p-0 rounded-2xl md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-[#F1F3FF]">
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">Our Services</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">Why Us</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">Testimonial</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">FAQ</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded bg-[#5CB85F] hover:bg-green-600 md:border-0 md:hover:text-blue-700 md:p-2 dark:text-white dark:hover:text-white">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Landing -->
+  <div id="landing" class="h-[85vh] bg-[#F1F3FF] w-full flex md:flex-row flex-col items-center">
+    <div class="text md:w-[50%] h-[50%] ml-4 p-4 flex flex-col justify-center md:ml-20">
+      <h1 class="text-[8vw] font-bold md:text-[2.5vw]  md:leading-[3vw]">Sewa & Rental Mobil Terbaik di kawasan Cibaduyut</h1>
+      <p class="text-sm md:text-[1vw] md:w-[70%] w-[90%] text-justify mt-6 md:leading-[1.5vw]">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil.</p>
+      <a href="" class="text-white bg-[#5CB85F] w-40 md:w-[10vw] text-sm md:text-[1vw] text-center p-2 mt-4">Mulai Sewa Mobil</a>
+    </div>
+    <div class="image md:w-[50%] h-[50%] w-full flex justify-end mt-10 md:mt-0">
+      <img src="./assets/images/car.svg" alt="" class="absolute w-[90%] md:top-[30%] md:w-[47%]">
+      <div class="bluecar md:w-full rounded-tl-[4rem] bg-blue-800 w-[95%] h-[50%] md:h-[10rem] mt-[10%] md:mt-[30%]"></div>
+    </div>
+  </div>
+  <!-- Best Car Rental -->
+  <div id="bestCar" class="h-[100vh] bg-white w-full flex md:flex-row flex-col items-center justify-center">
+    <div class="woman-image h-[40%] md:h-full md:w-[40%] md:flex md:flex-col justify-center items-center">
+      <img src="./assets/images/woman.svg" alt="" class="w-[50vw] md:w-[25vw]">
+      <img src="./assets/images/Ellipse 19.svg" alt="" class="w-[20vw] md:w-[8vw] relative right-[30%] bottom-[70%] md:absolute md:left-[10vw] md:bottom-[-20vw]">
+      <img src="./assets/images/Ellipse 20.svg" alt="" class="w-[8vw] md:w-[4vw] relative right-[5%] bottom-[25%] md:absolute md:left-[10vw] md:bottom-[-35vw]">
+      <img src="./assets/images/Ellipse 21.svg" alt="" class="w-[5vw] md:w-[2vw] relative left-[95%] bottom-[90%] md:absolute md:left-[40vw] md:bottom-[-15vw]">
+    </div>
+    <div class="text-woman w-[85%] md:w-[40%] md:h-full flex flex-col gap-4 md:justify-center">
+      <p class="font-bold text-[6vw] md:text-[2vw] text-justify">Best Car Rental for any kind of trip in Cibaduyut!</p>
+      <p class="text-xs md:text-[1vw] text-justify md:leading-[1.5vw]">Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.</p>
+      <div class="list flex flex-col gap-3">
+        <p class="flex flex-row gap-4 text-[3.5vw] md:text-[1vw]">
+          <img class="w-[5vw] md:w-[2vw]" src="https://img.icons8.com/fluency/48/instagram-check-mark.png" alt="instagram-check-mark"/>
+          Sewa Mobil Dengan Supir di Bali 12 Jam
+        </p>
+        <p class="flex flex-row gap-4 text-[3.5vw] md:text-[1vw]">
+          <img class="w-[5vw] md:w-[2vw]" src="https://img.icons8.com/fluency/48/instagram-check-mark.png" alt="instagram-check-mark"/>
+          Sewa Mobil Lepas Kunci di Bali 24 Jam
+        </p>
+        <p class="flex flex-row gap-4 text-[3.5vw] md:text-[1vw]">
+          <img class="w-[5vw] md:w-[2vw]" src="https://img.icons8.com/fluency/48/instagram-check-mark.png" alt="instagram-check-mark"/>
+          Sewa Mobil Jangka Panjang Bulanan
+        </p>
+        <p class="flex flex-row gap-4 text-[3.5vw] md:text-[1vw]">
+          <img class="w-[5vw] md:w-[2vw]" src="https://img.icons8.com/fluency/48/instagram-check-mark.png" alt="instagram-check-mark"/>
+          Gratis Antar - Jemput Mobil di Bandara
+        </p>
+        <p class="flex flex-row gap-4 text-[3.5vw] md:text-[1vw]">
+          <img class="w-[5vw] md:w-[2vw]" src="https://img.icons8.com/fluency/48/instagram-check-mark.png" alt="instagram-check-mark"/>
+          Layanan Airport Transfer / Drop In Out
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Why Us? -->
+  <div id="whyUs" class="h-[120vh] md:h-[50vh] bg-white w-full flex flex-col items-center mb-[10vh]">
+    <div class="text h-[20vh] w-full flex flex-col items-center gap-4 md:items-start md:w-[80vw]">
+      <p class="text-[6vw] md:text-[2vw] font-bold">Why Us?</p>
+      <p class="text-[4vw] md:text-[1vw]">Mengapa harus pilih Binar Car Rental?</p>
+    </div>
+    <div class="card-container flex flex-col md:flex-row gap-4 justify-center">
+      <div class="card1 w-[90vw] h-[25vh] md:h-[30vh] md:w-[20vw] border border-gray-400 p-6 rounded-2xl flex flex-col justify-center gap-5">
+        <img src="./assets/icon/1.svg" alt="" class="w-[10vw] md:w-[2.5vw]">
+        <p class="text-[4vw] md:text-[1vw] font-bold">Mobil Lengkap</p>
+        <p class="text-[3.5vw] md:text-[1vw] text-justify">Tersedia banyak pilihan mobil, kondisi masih baru, bersih dan terawat</p>
+      </div>
+      <div class="card2 w-[90vw] h-[25vh] md:h-[30vh] md:w-[20vw] border border-gray-400 p-6 rounded-2xl flex flex-col justify-center gap-5">
+        <img src="./assets/icon/2.svg" alt="" class="w-[10vw] md:w-[2.5vw]">
+        <p class="text-[4vw] md:text-[1vw] font-bold">Harga Murah</p>
+        <p class="text-[3.5vw] md:text-[1vw] text-justify">Harga murah dan bersaing, bisa bandingkan harga kami dengan rental mobil lain</p>
+      </div>
+      <div class="card3 w-[90vw] h-[25vh] md:h-[30vh] md:w-[20vw] border border-gray-400 p-6 rounded-2xl flex flex-col justify-center gap-5">
+        <img src="./assets/icon/3.svg" alt="" class="w-[10vw] md:w-[2.5vw]">
+        <p class="text-[4vw] md:text-[1vw] font-bold">Layanan 24 Jam</p>
+        <p class="text-[3.5vw] md:text-[1vw] text-justify">Siap melayani kebutuhan Anda selama 24 jam nonstop. Kami juga tersedia di akhir minggu</p>
+      </div>
+      <div class="card4 w-[90vw] h-[25vh] md:h-[30vh] md:w-[20vw] border border-gray-400 p-6 rounded-2xl flex flex-col justify-center gap-5">
+        <img src="./assets/icon/4.svg" alt="" class="w-[10vw] md:w-[2.5vw]">
+        <p class="text-[4vw] md:text-[1vw] font-bold">Sopir Profesional</p>
+        <p class="text-[3.5vw] md:text-[1vw] text-justify">Sopir yang profesional, berpengalaman, jujur, ramah dan selalu tepat waktu</p>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonial -->
+  <div class="testimonial h-[80vh] bg-white w-full flex flex-col items-center mb-[5vh] md:mb-[10vh]">
+    <div class="text flex h-[20vh] flex-col items-center">
+      <div class="text h-[20vh] w-[80%] flex flex-col items-center gap-4 md:items-start md:w-[80vw]">
+        <p class="text-[6vw] md:text-[2vw] font-bold">Testimonial</p>
+        <p class="text-[4vw] md:text-[1vw] text-center">Apa Yang Mereka Katakan Tentang Binar Car Rental?</p>
+      </div>
+    </div>
+    <div class="card-testi-container h-[60vh] w-full">
+      <div class="swiper">
+        <div class="swiper-container"></div>
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide bg-[#F1F3FF] rounded-xl shadow-xl flex flex-col md:flex-row justify-center gap-6 items-center p-6 md:w-[20vw] md:h-[50vh] md:px-[5vw]">
+            <img src="./assets/images/testi1.png" alt="" class="w-[25vw] md:w-[6vw]">
+            <div class="rating flex flex-col justify-center gap-6 items-center md:items-start md:gap-3">
+              <img src="./assets/icon/star.svg" alt="" class="w-[25vw] md:w-[6vw]">
+              <p class="text-justify text-[3.5vw] md:text-[1vw] md:text-left w-[90%]">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+              <p class="text-[3.5vw] font-semibold md:text-[1vw]">John Dee 32, Bromo</p>
+            </div>
+          </div>
+          <div class="swiper-slide bg-[#F1F3FF] rounded-xl shadow-xl flex flex-col md:flex-row justify-center gap-6 items-center p-6 md:w-[20vw] md:h-[50vh] md:px-[5vw]">
+            <img src="./assets/images/testi2.png" alt="" class="w-[25vw] md:w-[6vw]">
+            <div class="rating flex flex-col justify-center gap-6 items-center md:items-start md:gap-3">
+              <img src="./assets/icon/star.svg" alt="" class="w-[25vw] md:w-[6vw]">
+              <p class="text-justify text-[3.5vw] md:text-[1vw] md:text-left w-[90%]">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+              <p class="text-[3.5vw] font-semibold md:text-[1vw]">John Dee 32, Bromo</p>
+            </div>
+          </div>
+          <div class="swiper-slide bg-[#F1F3FF] rounded-xl shadow-xl flex flex-col md:flex-row  justify-center gap-6 items-center p-6 md:w-[20vw] md:h-[50vh] md:px-[5vw]">
+            <img src="./assets/images/testi1.png" alt="" class="w-[25vw] md:w-[6vw]">
+            <div class="rating flex flex-col justify-center gap-6 items-center md:items-start md:gap-3">
+              <img src="./assets/icon/star.svg" alt="" class="w-[25vw] md:w-[6vw]">
+              <p class="text-justify text-[3.5vw] md:text-[1vw] md:text-left w-[90%]">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+              <p class="text-[3.5vw] font-semibold md:text-[1vw]">John Dee 32, Bromo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev rounded-full text-black border border-gray-300 hover:bg-[#5CB85F] hover:border-0"></div>
+      <div class="swiper-button-next rounded-full text-black border border-gray-300 hover:bg-[#5CB85F] hover:border-0"></div>
+    </div>
+  </div>
+  <!-- Sewa Mobilmu Sekarang -->
+  <div class="sewa h-[70vh] bg-white w-full flex flex-col items-center md:mb-[10vh]">
+    <div class="container-blue bg-[#0D28A6] w-[90%] md:w-[85%] h-[60vh] p-5 rounded-2xl flex flex-col justify-center items-center gap-8">
+      <p class="text-white font-bold text-[7vw] md:text-[3vw] text-center w-[80%]">Sewa Mobil di (Lokasimu) Sekarang</p>
+      <p class="text-white text-[4vw] md:text-[1vw] font-extralight md:w-[50%] text-center w-[85%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <button class="bg-[#5CB85F] p-3 text-white font-semibold">Mulai Sewa Mobil</button>
+    </div>
+  </div>
+  <!-- FAQ -->
+  <div class="faq h-[80vh] bg-white w-full flex flex-col items-center">
+    <div class="faq-container w-[90vw] md:w-[80vw] flex flex-col md:flex-row items-center md:items-start gap-4">
+
+      <div class="text flex flex-col gap-4 mb-4 md:w-[50%] items-center md:items-start">
+        <p class="text-[6vw] md:text-[2vw] font-bold">Frequently Asked Question</p>
+        <p class="text-[3.5vw] md:text-[1vw]">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+      </div>
+
+      <div class="accordions w-[90vw] md:w-[50%]">
+
+        <!-- Accordion Item 1 -->
+        <div class="border border-gray-300 mb-4 rounded-xl">
+          <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleAccordion(1)">
+            <span class="text-[3.5vw] md:text-[1vw]">Apa saja syarat yang dibutuhkan?</span>
+            <svg id="icon-1" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div id="content-1" class="hidden border-t border-gray-300">
+            <p class="p-4 text-gray-600 text-[3.5vw] md:text-[1vw] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dicta quam! Alias laborum magni quidem natus dolores. At, doloremque beatae!</p>
+          </div>
+        </div>
+    
+        <!-- Accordion Item 2 -->
+        <div class="border border-gray-300 mb-4 rounded-xl">
+          <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleAccordion(2)">
+            <span class="text-[3.5vw] md:text-[1vw]">Berapa hari minimal sewa mobil lepas kunci?</span>
+            <svg id="icon-1" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div id="content-2" class="hidden border-t border-gray-300">
+            <p class="p-4 text-gray-600 text-[3.5vw] md:text-[1vw] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dicta quam! Alias laborum magni quidem natus dolores. At, doloremque beatae!</p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="border border-gray-300 mb-4 rounded-xl">
+          <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleAccordion(3)">
+            <span class="text-[3.5vw] w-[95%] md:text-[1vw]">Berapa hari sebelumnya sabaiknya booking sewa mobil?</span>
+            <svg id="icon-1" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div id="content-3" class="hidden border-t border-gray-300">
+            <p class="p-4 text-gray-600 text-[3.5vw] md:text-[1vw] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dicta quam! Alias laborum magni quidem natus dolores. At, doloremque beatae!</p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 4 -->
+        <div class="border border-gray-300 mb-4 rounded-xl">
+          <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleAccordion(4)">
+            <span class="text-[3.5vw] md:text-[1vw]">Apakah Ada biaya antar-jemput?</span>
+            <svg id="icon-1" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div id="content-4" class="hidden border-t border-gray-300">
+            <p class="p-4 text-gray-600 text-[3.5vw] md:text-[1vw] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dicta quam! Alias laborum magni quidem natus dolores. At, doloremque beatae!</p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 5 -->
+        <div class="border border-gray-300 mb-4 rounded-xl">
+          <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleAccordion(5)">
+            <span class="text-[3.5vw] md:text-[1vw]">Bagaimana jika terjadi kecelakaan</span>
+            <svg id="icon-1" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div id="content-5" class="hidden border-t border-gray-300">
+            <p class="p-4 text-gray-600 text-[3.5vw] md:text-[1vw] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dicta quam! Alias laborum magni quidem natus dolores. At, doloremque beatae!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<style>
+  .swiper {
+    height: 60vh;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 340%;
+    z-index: 10;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-button-next {
+    right: 47%;
+  }
+
+  .swiper-button-prev {
+    left: 47%;
+  }
+
+  .swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 12px;
+    color: black;
+  }
+  .swiper-button-prev:hover:after, .swiper-button-next:hover:after {
+    color: white;
+  }
+
+  .swiper-slide-active {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .swiper-button-next, .swiper-button-prev {
+      top: 437%;
+    }
+
+    .swiper-button-next {
+      left: 52%;
+    }
+
+    .swiper-button-prev {
+      left: 42%;
+    }
+
+    .swiper {
+      width: 90vw;
+      height: 50vh;
+    }
+  }
+</style>
+<script>
+  const swiper = new Swiper('.swiper', {
+
+    direction: 'horizontal',
+    centeredSlides: true,
+    spaceBetween: 20,
+    loop: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 1.85,
+        spaceBetween: 30,
+      }
+    }
+  });
+
+  function toggleAccordion(id) {
+      const content = document.getElementById('content-' + id);
+      const icon = document.getElementById('icon-' + id);
+
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    }
+</script>
+</html>
