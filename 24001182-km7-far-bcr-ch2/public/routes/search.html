@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binar Car Rental (BCR)</title>
+  <link rel="icon" href="../icon/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif
+    }
+
+    html {
+      height: 100%
+    }
+
+    ;
+  </style>
+</head>
+
+<body class="flex flex-col overflow-x-hidden">
+  <!-- Navbar -->
+  <div id="navbar" class="h-[15vh] bg-[#F1F3FF]">
+    <nav class="">
+      <div class="md:w-[90vw] flex flex-wrap items-center justify-between mx-auto p-6">
+        <div class="p-4">
+          <div id="blue-bar" class="h-8 w-20 bg-blue-800"></div>
+        </div>
+        <button data-collapse-toggle="navbar-default" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden dark:text-gray-400"
+          aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+        <div class="hidden z-10 w-full md:block md:w-auto md:mr-10 md:border-0 border border-black rounded-2xl"
+          id="navbar-default">
+          <ul
+            class="font-medium bg-[#F1F3FF] md:text-[1.1vw] flex flex-col p-4 md:p-0 rounded-2xl md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-[#F1F3FF]">
+            <li>
+              <a href="#"
+                class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">Our
+                Services</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">Why
+                Us</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">Testimonial</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-2 dark:text-black md:dark:hover:text-blue-500 dark:hover:text-blue-500">FAQ</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 px-3 text-gray-900 rounded bg-[#5CB85F] hover:bg-green-600 md:border-0 md:hover:text-blue-700 md:p-2 dark:text-white dark:hover:text-white">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Landing -->
+  <div id="landing" class="h-[55vh] bg-[#F1F3FF] w-full flex md:flex-row flex-col items-center mb-[5vh]">
+    <div class="text md:w-[50%] h-[50%] ml-4 p-4 flex flex-col justify-center md:ml-20">
+      <h1 class="text-[8vw] font-bold md:text-[2.5vw]  md:leading-[3vw]">Sewa & Rental Mobil Terbaik di kawasan
+        Cibaduyut</h1>
+      <p class="text-sm md:text-[1vw] md:w-[70%] w-[90%] text-justify mt-6 md:leading-[1.5vw]">Selamat datang di Binar
+        Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
+        untuk sewa mobil.</p>
+    </div>
+    <div class="image md:w-[50%] h-[50%] w-full flex justify-end mt-10 md:mt-0">
+      <img src="../images/car.svg" alt="" class="absolute w-[80%] md:top-[20%] md:w-[40%]">
+      <div class="bluecar md:w-full rounded-tl-[4rem] bg-blue-800 w-[95%] h-[50%] md:h-[17rem] mt-[10%] md:mt-[2%]">
+      </div>
+    </div>
+  </div>
+  <!-- Search Bar -->
+  <div
+    class="search-bar-container w-[100vw] md:relative -top-[15vh] overflow-x-hidden flex flex-col justify-center items-center md:p-2">
+    <div
+      class="container-bar text-[1vw] md:w-[80%] h-[20vh] w-full bg-white shadow-xl rounded-xl flex flex-col md:flex-row justify-center gap-[2vw] items-center text-gray-700">
+      <div class="box-1">
+        <p>Tipe Driver</p>
+        <select id="driver" class="border border-gray-400 w-[15vw] h-[6vh] text-[0.9vw] rounded-md p-[0.5vw]">
+          <option value="0" hidden>Pilih Tipe Driver</option>
+          <option value="1">Dengan Sopir</option>
+          <option value="2">Tanpa Sopir (Lepas Kunci)</option>
+        </select>
+      </div>
+      <div class="box-2">
+        <p>Tangggal</p>
+        <input id="date" type="date" class="border border-gray-400 w-[15vw] h-[6vh] text-[0.9vw] rounded-md p-[0.5vw]">
+      </div>
+      <div class="box-3">
+        <p>Waktu Jemput/Ambil</p>
+        <select id="time" class="border border-gray-400 w-[15vw] h-[6vh] text-[0.9vw] rounded-md p-[0.5vw]">
+          <option value="0" hidden>Pilih Waktu</option>
+          <option value="08:00">08:00</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+          <option value="19:00">19:00</option>
+        </select>
+      </div>
+      <div class="box-4">
+        <p>Jumlah Penumpang (optional)</p>
+        <select id="passengers" class="border border-gray-400 w-[15vw] h-[6vh] text-[0.9vw] rounded-md p-[0.5vw]">
+          <option value="0" hidden>Pilih Jumlah Penumpang</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+      <div class="box-5">
+        <button id="submit" class="bg-green-500 p-2 mt-[3vh] text-white hover:bg-green-700">Cari Mobil</button>
+      </div>
+    </div>
+    <div id="result"
+      class="card-result self-center w-[80%] p-[5vh] flex flex-row justify-center items-center flex-wrap gap-[5vh]">
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div
+    class="footer-container md:px-[10vw] md:pb-[10vh] w-full bg-white flex flex-col md:flex-row gap-[3vh] items-center md:items-start">
+    <div class="footer-1 w-[90%] md:w-[25%] flex flex-col gap-[2vh] text-[3.5vw] md:text-[1vw] text-gray-600">
+      <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+      <p>binarcarrental@gmail.com</p>
+      <p>081-233-334-808</p>
+    </div>
+    <div
+      class="footer-2 w-[90%] md:w-[25%] flex flex-col md:items-center gap-[2vh] text-[3.5vw] md:text-[1vw] font-medium">
+      <p>Our Services</p>
+      <p>Why Us</p>
+      <p>Testimonial</p>
+      <p>FAQ</p>
+    </div>
+    <div
+      class="footer-3 w-[90%] md:w-[25%] flex flex-col md:items-start gap-[3vh] text-[3.5vw] md:text-[1vw] text-gray-600">
+      <p>Connect with us</p>
+      <img src="../icon/list item.svg" alt="" class="w-[70vw] md:w-[15vw] h-[6vh]">
+    </div>
+    <div class="footer-4 w-[90%] md:w-[25%] flex flex-col gap-[3vh] text-[3.5vw] md:text-[1vw] text-gray-600">
+      <p>Copyright Binar 2022</p>
+      <div id="blue-bar" class="h-[5.5vh] w-[30vw] md:w-[8vw] bg-blue-800"></div>
+    </div>
+  </div>
+</body>
+<script type="module" src="../../script/main.js"></script>
+
+</html>
