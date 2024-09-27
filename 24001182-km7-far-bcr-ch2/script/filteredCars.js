@@ -61,7 +61,7 @@ export default function filterCars(cars) {
     });
   } else {
     result.innerHTML = `
-      <p class="text-white border border-green-600">Maaf, Mobil Tidak Tersedia</p>
+      <p class="text-black border">Maaf, Mobil Tidak Tersedia</p>
     `;
   }
 }
