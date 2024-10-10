@@ -1,6 +1,7 @@
 const fs = require("fs");
 const cars = require("../../data/cars.json");
 const { v4: uuidv4 } = require("uuid");
+const { NotFoundError } = require("../utils/request");
 
 const getCarsRepo = (manufacture, model) => {
   if (!manufacture && !model) {
@@ -32,38 +33,35 @@ const createCarRepo = (car) => {
 
   cars.push(newCar);
 
-  fs.writeFileSync(
-    "./data/cars.json",
-    JSON.stringify(cars, null, 4)
-  );
+  fs.writeFileSync("./data/cars.json", JSON.stringify(cars, null, 4));
 
   return newCar;
 };
 
 const updateCarRepo = (id, car) => {
-  let updatedCar = null;
-  const updatedCars = cars.map((item) => {
-    if (item.id == id) {
-      updatedCar = {
-        ...item,
-        ...car,
-      };
-      return updatedCar;
-    }
-    return item;
-  });
+  const findIndex = cars.findIndex((car) => car.id == id);
+  if (findIndex !== -1) {
+    cars.splice(findIndex, 1, {
+      ...cars[findIndex],
+      ...car,
+    });
+  } else {
+    throw new NotFoundError("Car not found");
+  }
 
   fs.writeFileSync("./data/cars.json", JSON.stringify(updatedCars, null, 4));
 
-  return updatedCar;
+  return cars[findIndex];
 };
 
 const deleteCarRepo = (id) => {
-  const deletedCar = cars.find((car) => car.id == id);
-  const updatedCars = cars.filter((car) => car.id != id);
+  const findIndex = cars.findIndex((car) => car.id == id);
+  if (findIndex < 0) {
+    return null;
+  }
 
-  fs.writeFileSync("./data/cars.json", JSON.stringify(updatedCars, null, 4));
-
+  const deletedCar = cars.splice(findIndex, 1);
+  fs.writeFileSync("./data/cars.json", JSON.stringify(cars, null, 4));
   return deletedCar;
 };
 
