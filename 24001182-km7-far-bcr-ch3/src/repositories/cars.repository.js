@@ -30,6 +30,8 @@ const createCarRepo = (car) => {
     ...car,
   };
 
+  cars.push(newCar);
+
   fs.writeFileSync(
     "./data/cars.json",
     JSON.stringify([...cars, newCar], null, 4)
