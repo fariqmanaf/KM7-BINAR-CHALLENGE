@@ -49,7 +49,7 @@ const updateCarRepo = (id, car) => {
     throw new NotFoundError("Car not found");
   }
 
-  fs.writeFileSync("./data/cars.json", JSON.stringify(updatedCars, null, 4));
+  fs.writeFileSync("./data/cars.json", JSON.stringify(cars, null, 4));
 
   return cars[findIndex];
 };
