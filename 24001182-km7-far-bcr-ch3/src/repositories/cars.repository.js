@@ -1,5 +1,5 @@
 const fs = require("fs");
-const cars = JSON.parse(fs.readFileSync(`./data/cars.json`, "utf-8"));
+const cars = require("../../data/cars.json");
 const { v4: uuidv4 } = require("uuid");
 
 const getCarsRepo = (manufacture, model) => {
@@ -32,7 +32,7 @@ const createCarRepo = (car) => {
 
   fs.writeFileSync(
     "./data/cars.json",
-    JSON.stringify([...cars, newCar], null, 2)
+    JSON.stringify([...cars, newCar], null, 4)
   );
 
   return newCar;
@@ -51,7 +51,7 @@ const updateCarRepo = (id, car) => {
     return item;
   });
 
-  fs.writeFileSync("./data/cars.json", JSON.stringify(updatedCars, null, 2));
+  fs.writeFileSync("./data/cars.json", JSON.stringify(updatedCars, null, 4));
 
   return updatedCar;
 };
@@ -60,7 +60,7 @@ const deleteCarRepo = (id) => {
   const deletedCar = cars.find((car) => car.id == id);
   const updatedCars = cars.filter((car) => car.id != id);
 
-  fs.writeFileSync("./data/cars.json", JSON.stringify(updatedCars, null, 2));
+  fs.writeFileSync("./data/cars.json", JSON.stringify(updatedCars, null, 4));
 
   return deletedCar;
 };
