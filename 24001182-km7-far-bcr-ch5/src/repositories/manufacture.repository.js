@@ -1,8 +1,6 @@
-const { PrismaClient } = require("@prisma/client");
 const JSONBigInt = require("json-bigint");
 
-const prisma = new PrismaClient();
-
+const prisma = require("../config/database/prisma");
 exports.getManufactures = async (name) => {
     const filters = {};
 

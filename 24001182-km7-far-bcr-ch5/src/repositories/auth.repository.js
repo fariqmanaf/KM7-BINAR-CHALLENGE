@@ -1,15 +1,14 @@
-const { PrismaClient } = require("@prisma/client");
 const JSONBigInt = require("json-bigint");
 
-const prisma = new PrismaClient();
+const prisma = require("../config/database/prisma");
 
 exports.getUserByEmail = async (email) => {
-  const user = await prisma.users.findFirst({
-    where: {
-      email: email,
-    },
-  });
+    const user = await prisma.users.findFirst({
+        where: {
+            email: email,
+        },
+    });
 
-  const serializedUser = JSONBigInt.stringify(user);
-  return JSONBigInt.parse(serializedUser);
+    const serializedUser = JSONBigInt.stringify(user);
+    return JSONBigInt.parse(serializedUser);
 };

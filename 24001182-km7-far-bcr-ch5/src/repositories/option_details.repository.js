@@ -1,8 +1,6 @@
-const { PrismaClient } = require("@prisma/client");
 const JSONBigInt = require("json-bigint");
 
-const prisma = new PrismaClient();
-
+const prisma = require("../config/database/prisma");
 const getOptionsRepo = async (option) => {
     const searchedOptions = await prisma.option_details.findMany({
         where: option ? { option: option } : undefined,

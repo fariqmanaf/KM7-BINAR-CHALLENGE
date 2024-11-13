@@ -1,7 +1,5 @@
-const { PrismaClient } = require("@prisma/client");
 const JSONBigInt = require("json-bigint");
-const prisma = new PrismaClient();
-
+const prisma = require("../config/database/prisma");
 const getOptionByIdRepo = async (id) => {
     const searchedOptions = await prisma.options.findMany({
         where: { cars_id: parseInt(id) },

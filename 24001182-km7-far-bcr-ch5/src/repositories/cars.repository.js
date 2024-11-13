@@ -1,9 +1,8 @@
-const { PrismaClient } = require("@prisma/client");
 const JSONBigInt = require("json-bigint");
 const { getSpecsByIdRepo } = require("./specs.repository");
 const { getOptionByIdRepo } = require("./options.repository");
 
-const prisma = new PrismaClient();
+const prisma = require("../config/database/prisma");
 
 const getCarsRepo = async (transmission) => {
     let query = {

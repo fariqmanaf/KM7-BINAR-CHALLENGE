@@ -1,8 +1,6 @@
-const { PrismaClient } = require("@prisma/client");
 const JSONBigInt = require("json-bigint");
 
-const prisma = new PrismaClient();
-
+const prisma = require("../config/database/prisma");
 const getSpecsRepo = async (spec) => {
     const filters = {};
 
@@ -16,8 +14,8 @@ const getSpecsRepo = async (spec) => {
     const searchedSpec = await prisma.spec_details.findMany({
         where: filters,
         orderBy: {
-          id : "asc",
-        }
+            id: "asc",
+        },
     });
 
     const serializedSpecs = JSONBigInt.stringify(searchedSpec);
