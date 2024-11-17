@@ -25,46 +25,38 @@ const getCarsRepo = async (capacity, availableAt, transmission) => {
         orderBy: {
             id: "asc",
         },
+        where: {},
     };
 
     if (capacity) {
-        query.where = {
-            car_details: {
-                some: {
-                    capacity: {
-                        equals: parseInt(capacity),
-                    },
-                },
+        query.where.car_details = {
+            some: {
+                capacity: parseInt(capacity),
             },
         };
     }
 
     if (availableAt) {
-        query.where = {
-            availability: {
-                available_at: {
-                    contains: availableAt,
-                    mode: "insensitive",
-                },
-            },
+        query.where.availability = {
+            available_at: availableAt,
         };
     }
 
     if (transmission) {
-        query.where = {
-            car_details: {
+        if (query.where.car_details) {
+            query.where.car_details.some.transmission = transmission;
+        } else {
+            query.where.car_details = {
                 some: {
-                    transmission: {
-                        contains: transmission,
-                        mode: "insensitive",
-                    },
+                    transmission: transmission,
                 },
-            },
-        };
+            };
+        }
     }
 
     const searchedCars = await prisma.cars.findMany(query);
     const serializedCars = JSONBigInt.stringify(searchedCars);
+
     return JSONBigInt.parse(serializedCars);
 };
 
