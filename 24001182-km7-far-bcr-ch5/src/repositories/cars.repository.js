@@ -4,7 +4,7 @@ const { getOptionByIdRepo } = require("./options.repository");
 
 const prisma = require("../config/database/prisma");
 
-const getCarsRepo = async (transmission) => {
+const getCarsRepo = async (capacity, availableAt, transmission) => {
     let query = {
         include: {
             manufactures: true,
@@ -27,6 +27,29 @@ const getCarsRepo = async (transmission) => {
         },
     };
 
+    if (capacity) {
+        query.where = {
+            car_details: {
+                some: {
+                    capacity: {
+                        equals: parseInt(capacity),
+                    },
+                },
+            },
+        };
+    }
+
+    if (availableAt) {
+        query.where = {
+            availability: {
+                available_at: {
+                    contains: availableAt,
+                    mode: "insensitive",
+                },
+            },
+        };
+    }
+
     if (transmission) {
         query.where = {
             car_details: {
@@ -39,6 +62,7 @@ const getCarsRepo = async (transmission) => {
             },
         };
     }
+
     const searchedCars = await prisma.cars.findMany(query);
     const serializedCars = JSONBigInt.stringify(searchedCars);
     return JSONBigInt.parse(serializedCars);
